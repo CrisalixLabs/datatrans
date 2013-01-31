@@ -1,4 +1,4 @@
-require 'active_support/core_ext/module'
+require 'active_support'
 require 'action_view'
 
 module Datatrans
