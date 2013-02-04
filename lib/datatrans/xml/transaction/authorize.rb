@@ -21,6 +21,7 @@ class Datatrans::XML::Transaction
         xml.expm params[:expm]
         xml.expy params[:expy]
         xml.sign sign(Datatrans.merchant_id, params[:amount], params[:currency], params[:refno])
+        xml.sign sign2(Datatrans.merchant_id, params[:amount], params[:currency], params[:uppTransactionId])
       end
     end
     
