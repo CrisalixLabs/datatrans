@@ -30,7 +30,7 @@ module Datatrans
 
   def self.environment=(environment)
     case environment
-    when :development
+    when :development, :staging
       @@base_url           = TEST_BASE_URL
       @@web_authorize_url  = TEST_WEB_AUTHORIZE_URL
       @@xml_authorize_url  = TEST_XML_AUTHORIZE_URL
