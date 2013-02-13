@@ -19,7 +19,6 @@ class Datatrans::XML::Transaction
         xml.currency params[:currency]
         xml.uppTransactionId params[:transaction_id]
         xml.sign sign(Datatrans.merchant_id, params[:amount], params[:currency], params[:refno])
-        xml.sign2 sign(Datatrans.merchant_id, params[:amount], params[:currency], params[:uppTransactionId])
       end
     end
     
