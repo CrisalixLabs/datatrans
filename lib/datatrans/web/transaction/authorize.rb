@@ -8,7 +8,7 @@ class Datatrans::Web::Transaction
     
     def successful?
       raise Datatrans::InvalidSignatureError unless valid_signature?
-      response_code == '01' && response_message == 'Authorized' && !errors_occurred?
+      response_code == '01' && !errors_occurred?
     end
     
     def valid_signature?
